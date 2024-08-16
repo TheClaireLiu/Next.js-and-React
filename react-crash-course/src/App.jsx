@@ -1,13 +1,29 @@
 // 在JSX code中，小写字母开头的元素被认为是HTML元素，components以大写字母开头
-
+import {useState} from 'react';
 import './App.css'
 import PostsList from './components/PostsList';
+import MainHeader from "./components/MainHeader.jsx";
 
 function App() {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
+
+  function showModalHandler(){
+    setModalIsVisible(true);
+  }
+  function hideModalHandler(){
+    setModalIsVisible(false);
+  }
+
   return (
-  <main>
-    <PostsList />
-  </main>
+    <>
+      <MainHeader onCreatePost={showModalHandler}/>
+      <main>
+        <PostsList
+          isPosting={modalIsVisible}
+          onStopPosting={hideModalHandler}
+        />
+      </main>
+    </>
   );
 }
 
