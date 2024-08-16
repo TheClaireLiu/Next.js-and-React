@@ -1,7 +1,8 @@
 import classes from './NewPost.module.css';
 import {useState} from "react";
 
-function NewPost({onCancel}) {
+// eslint-disable-next-line react/prop-types
+function NewPost({onCancel,onAddPost}) {
     // 当输入到该文本区域的值发生更改时都会触发,function 代表触发后会发生的内容、
     // with React， we use declarative approach（声明式方法）添加一个特殊的prop， 一个以on开头的prop，然后是想要监听的事件名称
     // document.querySelector('textarea').addListener('change', function(event e){})；
@@ -34,7 +35,7 @@ function NewPost({onCancel}) {
       body: enteredBody,
       author: enteredAuthor
     };
-    console.log(postData);
+    onAddPost(postData);
     onCancel(); //关闭NewPosNewPostNewPost窗口
   }
 

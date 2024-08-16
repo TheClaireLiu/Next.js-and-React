@@ -2,6 +2,7 @@ import { MdPostAdd, MdMessage } from 'react-icons/md';
 
 import classes from './MainHeader.module.css';
 
+// eslint-disable-next-line react/prop-types
 function MainHeader({ onCreatePost }) {
   return (
     <header className={classes.header}>
