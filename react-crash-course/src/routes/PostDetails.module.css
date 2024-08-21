@@ -1,17 +1,9 @@
-.post{
-    margin: 1rem 0;
+.details {
     padding: 1rem;
-    background-color: #9c7eee;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    animation: animate-in 1s ease-out forwards;
+    width: 30rem;
 }
 
-.post a {
-    text-decoration: none;
-}
-
-.author{
+.author {
     font-size: 0.8rem;
     font-weight: bold;
     color: #543280;
@@ -19,7 +11,7 @@
     text-transform: uppercase;
 }
 
-.text{
+.text {
     white-space: pre-wrap;
     font-size: 1.25rem;
     margin: 0.25rem 0 0 0;
@@ -27,18 +19,6 @@
     font-style: italic;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.details a {
+    text-decoration: none;
+}
