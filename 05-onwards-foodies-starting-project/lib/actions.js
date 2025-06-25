@@ -3,6 +3,10 @@
 import {saveMeal} from "@/lib/meals";
 import {redirect} from "next/navigation";
 
+function isInvalidText(text){
+  return !text || text.trim() === '';
+}
+
 export async function shareMeal(formData){
 
   const meal = {
@@ -12,10 +16,21 @@ export async function shareMeal(formData){
     image:formData.get('image'),
     creator:formData.get('name'),
     creator_email:formData.get('email')
+  };
+
+  if(isInvalidText(meal.title) ||
+    isInvalidText(meal.summary) ||
+    isInvalidText(meal.instructions) ||
+    isInvalidText(meal.creator) ||
+    isInvalidText(meal.creator_email) ||
+    !meal.creator_email.includes('@') ||
+    !meal.image || meal.image.size === 0
+  ){
+    throw new Error('Invalid Input')
   }
+
   // console.log(meal);
   await saveMeal(meal);
-
   //重定向页面
   redirect('/meals');
 }
