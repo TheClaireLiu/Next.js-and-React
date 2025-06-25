@@ -2,12 +2,13 @@
 
 import {saveMeal} from "@/lib/meals";
 import {redirect} from "next/navigation";
+import {revalidatePath} from "next/cache";
 
 function isInvalidText(text){
   return !text || text.trim() === '';
 }
 
-export async function shareMeal(formData){
+export async function shareMeal(prevState,formData){
 
   const meal = {
     title: formData.get('title'),
@@ -26,11 +27,15 @@ export async function shareMeal(formData){
     !meal.creator_email.includes('@') ||
     !meal.image || meal.image.size === 0
   ){
-    throw new Error('Invalid Input')
+    return{
+      message:'Invalid Input.'
+    }
   }
 
   // console.log(meal);
   await saveMeal(meal);
+  // re-validate the cash that belongs to a certain path
+  // revalidatePath('/meals');
   //重定向页面
   redirect('/meals');
 }

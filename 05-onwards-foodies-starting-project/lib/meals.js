@@ -2,7 +2,11 @@ import fs from 'node:fs';
 import sql from 'better-sqlite3';
 import slugify from "slugify";
 import xss from "xss";
+import { S3 } from '@aws-sdk/client-s3';
 
+const s3 = new S3({
+  region: 'us-east-1'
+});
 const db = sql('meals.db');
 
 export async function getMeals(){
@@ -36,22 +40,31 @@ export async function saveMeal(meal){
   // 6️⃣ 把上传的图片转换成 buffer
   const bufferedImage = await meal.image.arrayBuffer();// arrayBuffer will give you a promise, that eventually resolves to that buffer 最终解析到该缓冲区的promise
 
-  await new Promise((resolve, reject) => {
-    const stream = fs.createWriteStream(filePath); // ✅ 使用 filePath
-
-    stream.write(Buffer.from(bufferedImage), (error) => {
-      if (error) {
-        reject(new Error("Save image failed!"));
-        return;
-      }
-      stream.end();
-    });
-
-    stream.on("finish", () => resolve());
-    stream.on("error", (err) => reject(err));
+  // ✅ 上传到 S3
+  await s3.putObject({
+    Bucket: 'claire-nextjs-demo-users-image', // ← 你的 bucket 名字
+    Key: fileName,
+    Body: Buffer.from(bufferedImage),
+    ContentType: meal.image.type,
   });
-  // 更新 meal 对象中的 image 字段为图片的相对路径，用于后续数据库插入
-  meal.image = `/images/${fileName}`;
+  meal.image = fileName;
+
+  // await new Promise((resolve, reject) => {
+  //   const stream = fs.createWriteStream(filePath); // ✅ 使用 filePath
+  //
+  //   stream.write(Buffer.from(bufferedImage), (error) => {
+  //     if (error) {
+  //       reject(new Error("Save image failed!"));
+  //       return;
+  //     }
+  //     stream.end();
+  //   });
+  //
+  //   stream.on("finish", () => resolve());
+  //   stream.on("error", (err) => reject(err));
+  // });
+  // // 更新 meal 对象中的 image 字段为图片的相对路径，用于后续数据库插入
+  // meal.image = `/images/${fileName}`;
 
   db.prepare(`
     INSERT INTO meals

@@ -96,3 +96,12 @@
     color: #979797;
     cursor: not-allowed;
 }
+
+.error {
+    color: red;
+    background-color: #ffe6e6;
+    padding: 0.5rem 1rem;
+    border: 1px solid red;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
