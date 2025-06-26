@@ -3,7 +3,7 @@ import {notFound} from "next/navigation";
 
 import { getMeal } from '@/lib/meals';
 import classes from './page.module.css';
-
+// app/meals/[mealSlug]/page.js
 export async function  generateMetadata({params}){
   const meal = getMeal(params.mealSlug);
 

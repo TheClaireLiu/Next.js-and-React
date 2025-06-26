@@ -4,7 +4,7 @@ import mealIcon from '@/assets/icons/meal.png';
 import communityIcon from '@/assets/icons/community.png';
 import eventsIcon from '@/assets/icons/events.png';
 import classes from './page.module.css';
-
+// app/community/page.js
 export default function CommunityPage() {
   return (
     <>

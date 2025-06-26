@@ -1,3 +1,4 @@
+// app/meals/error.js
 'use client';
 //只会处理与此错误位于同一文件夹下的page.js中发生的错误，可以放在根目录下用来catch 任何错误。
 export default function Error(){

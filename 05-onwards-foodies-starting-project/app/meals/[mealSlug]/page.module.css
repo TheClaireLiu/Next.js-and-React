@@ -1,9 +1,14 @@
+/*// app/meals/[mealSlug]/page.module.css*/
+
 .header {
     display: flex;
     padding: 2rem 1rem;
     gap: 3rem;
     margin: auto;
     max-width: 80rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .image {
@@ -123,5 +128,26 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .headerText h1 {
+        font-size: 2.5rem;
+    }
+
+    .instructions {
+        padding: 1.5rem;
+        font-size: 1rem;
     }
 }
