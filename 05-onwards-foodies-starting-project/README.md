@@ -49,10 +49,10 @@ The project is built with **Next.js (App Router)** and **React**, using **JavaSc
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./public/demo-desktop.png" alt="Desktop view" width="700" />
+  <img src="./public/demo-desktop.jpg" alt="Desktop view" width="700" />
 </p>
 <p align="center">
-  <img src="./public/demo-mobile.png" alt="Mobile view" width="300" />
+  <img src="./public/demo-mobile.jpg" alt="Mobile view" width="300" />
 </p>
 
 ---
