@@ -1,78 +1,71 @@
-# 🍔 Foodies – Restaurant Discovery App
+# 🍔 Foodies – Responsive Restaurant Discovery App
 
-**Foodies** is a full-stack web app that helps users explore meals and connect through a shared love of food.  
-The project is built with **Next.js (App Router)** and **React**, using **JavaScript** and **CSS Modules** for styling.
+**Foodies** is a responsive full-stack food discovery app that lets users browse meals by category, rating, and location.  
+Built with **Next.js App Router**, **React**, and **TypeScript**, and styled using **CSS Modules**.
 
----
-
-## 🚀 Features
-
-- ✅ Built with **Next.js 13 App Router**
-- ✅ Responsive layout (mobile/tablet/desktop)
-- ✅ Image slideshow hero section
-- ✅ Category-based meal filtering
-- ✅ Clean and modular file structure
-- ✅ CSS Modules for scoped styling
-- ✅ Fully deployed on **Vercel**
-- ✅ SEO-friendly with custom `<meta>` tags
+Deployed on **Vercel** | Local data via **SQLite**
 
 ---
 
-## 🔧 Planned Features
+## 🌐 Live Demo & Code
 
-- 🔐 User authentication with NextAuth
-- 💾 MongoDB integration for storing meals
-- 🔍 Search, pagination, and error handling
-- 🔒 Protected routes & form submissions
+🔗 [Live Demo](https://next-js-and-react-woad.vercel.app)  
+📂 [GitHub Repo](https://github.com/TheClaireLiu/Next.js-and-React/tree/master/05-onwards-foodies-starting-project)
 
 ---
 
-## 🛠 Tech Stack
+## ✨ Key Features
 
-| Layer       | Tools/Tech                 |
-|-------------|----------------------------|
-| Frontend    | Next.js 13+, React, JavaScript |
-| Styling     | CSS Modules                |
-| Deployment  | Vercel                     |
-| Image CDN   | Vercel / Next.js           |
-| Dev Tools   | ESLint, Prettier, Git      |
-
----
-
-## 🌐 Live Demo
-
-👉 [Live site](https://next-js-and-react-woad.vercel.app)  
-📦 [GitHub Repo](https://github.com/TheClaireLiu/Next.js-and-React/tree/master/05-onwards-foodies-starting-project)
+- ✅ Fully responsive layout (mobile → desktop)
+- ✅ Animated image slideshow
+- ✅ Category-based filtering
+- ✅ Clean UI and accessible component structure
+- ✅ TypeScript refactoring
+- ✅ Image upload support via **AWS S3**
+- ✅ Backend logic powered by **SQLite** (`better-sqlite3`)
+- ✅ Deployed on **Vercel**
+- 🔐 *Coming soon*: Authentication and backend integration
 
 ---
 
-## 📸 Screenshots
+## 🖼️ Screenshots
 
 <p align="center">
   <img src="./public/demo-desktop.jpg" alt="Desktop view" width="700" />
 </p>
+
 <p align="center">
   <img src="./public/demo-mobile.jpg" alt="Mobile view" width="300" />
 </p>
 
 ---
 
+## 🛠 Tech Stack
+
+| Layer        | Tools/Tech                            |
+|--------------|----------------------------------------|
+| Frontend     | Next.js 13+ (App Router), React, TypeScript |
+| Styling      | CSS Modules                            |
+| Database     | SQLite (local)                         |
+| Deployment   | Vercel                                 |
+| Upcoming     | Authentication (NextAuth), MongoDB     |
+
+---
+
 ## 📌 Project Status
 
-> 🎯 First milestone completed: UI, routing, and responsive layout  
-> 🔄 In progress: Authentication and backend data integration  
-> 📈 Analytics: 0% error rate, fast TTFB & LCP via Vercel
+> ✅ **Finalized UI + Responsive design + TypeScript migration**  
+> 🔄 *Currently integrating authentication and backend*  
+> 📊 Tracked with Vercel Analytics (0% error rate over 300+ requests)
 
 ---
 
 ## 👩‍💻 Author
 
 **Claire Liu**  
-🔗 [LinkedIn](https://www.linkedin.com/in/wanying--liu/) |  
-💻 [GitHub](https://github.com/TheClaireLiu)
+🎓 Final-semester Web Dev student 
+🌍 Based in Ottawa, Canada | Open to remote internships & entry-level roles
 
----
-
-## 📣 Feedback & Contributions
-
-Feel free to open issues or pull requests. I welcome feedback and collaborators!
+- 🔗 [LinkedIn](https://www.linkedin.com/in/wanying--liu/)
+- 🐙 [GitHub](https://github.com/TheClaireLiu)
+- 📧 cliu202211@gmail.com
