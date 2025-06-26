@@ -1,57 +1,64 @@
 # 🍔 Foodies – Restaurant Discovery App
 
-**Foodies** is a full-stack web app that helps users explore restaurants by category, rating, and location.  
-The project is built with **Next.js (App Router)** and **React**, using **JavaScript** and **CSS Modules** for styling.
+**Foodies** is a responsive full-stack web application that allows users to explore meals and restaurants by category, rating, and location.  
+Built with **Next.js App Router** and **React**, styled using **CSS Modules**, and deployed on **Vercel**.
 
-This project is under active development.
-
----
-
-## 🚀 Features (Current)
-
-- Built with **Next.js 13 App Router**
-- Responsive layout and routing
-- Category-based restaurant filtering
-- CSS Modules for scoped styling
-- Deployed on **Vercel** with request-level observability
+> 🚧 *This project is under active development.*
 
 ---
 
-## 🔧 Upcoming Features
+## 🚀 Current Features
 
-- User authentication (NextAuth or custom auth)
-- Backend integration (MongoDB or mock data API)
-- Search, pagination, and error handling
-- Protected routes & form submissions
+- ⚛️ **Next.js 13+ App Router** (File-based routing, server/client components)
+- 📱 **Responsive UI** for mobile and desktop
+- 🔍 **Category-based filtering** for meals
+- 🎨 **Scoped CSS Modules** for modular styling
+- ☁️ **Deployed on Vercel** with built-in performance insights
+
+---
+
+## 🧭 Upcoming Features
+
+- 🔐 User Authentication (NextAuth.js or custom flow)
+- 📦 Backend Integration (MongoDB or RESTful API)
+- 🔎 Search, Pagination, Error Handling
+- 🔒 Protected Routes & Form Submission
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer     | Tools/Tech                 |
-|-----------|----------------------------|
-| Frontend  | Next.js 13+, React, JavaScript |
-| Styling   | CSS Modules                |
-| Deployment| Vercel                     |
-| In Progress | Authentication, Backend Data |
+| Layer        | Tech                     |
+|--------------|--------------------------|
+| Frontend     | Next.js 13+, React, JS   |
+| Styling      | CSS Modules              |
+| Deployment   | Vercel                   |
+| In Progress  | Authentication, Backend  |
 
 ---
 
 ## 🌐 Live Demo
 
-👉 [Live site](https://next-js-and-react-woad.vercel.app)  
-📦 [GitHub Repo](https://github.com/TheClaireLiu/Next.js-and-React/tree/master/05-onwards-foodies-starting-project)
+- 🔗 [Live Site](https://next-js-and-react-woad.vercel.app)
+- 💻 [GitHub Repo](https://github.com/TheClaireLiu/Next.js-and-React/tree/master/05-onwards-foodies-starting-project)
 
 ---
 
 ## 📌 Project Status
 
-> 👩‍💻 First milestone completed: UI + Routing + Filtering  
-> 🔄 Currently implementing authentication & backend integration  
-> 🔍 Tracked with Vercel Analytics (0% error rate over 300+ requests)
+✅ **First milestone completed**: UI, routing, and filtering  
+🚧 **In progress**: Authentication and backend integration  
+📊 **Analytics**: 0% error rate across 300+ requests (via Vercel)
 
 ---
 
 ## 👩‍💻 Author
 
-**Claire Liu** – [LinkedIn](https://www.linkedin.com/in/wanying--liu/) | [GitHub](https://github.com/TheClaireLiu)
+**Claire Liu**  
+🔗 [LinkedIn](https://www.linkedin.com/in/wanying--liu/) | 🐙 [GitHub](https://github.com/TheClaireLiu)
+
+---
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).

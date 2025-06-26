@@ -1,10 +1,11 @@
+// app/meals/[mealSlug]/page.js
 import Image from 'next/image';
 import {notFound} from "next/navigation";
 
 import { getMeal } from '@/lib/meals';
 import classes from './page.module.css';
-// app/meals/[mealSlug]/page.js
-export async function  generateMetadata({params}){
+
+export async function  generateMetadata({params}:{params:{mealSlug:string}}){
   const meal = getMeal(params.mealSlug);
 
   if(!meal){
@@ -13,11 +14,11 @@ export async function  generateMetadata({params}){
 
   return {
     title: meal.title,
-    discription: meal.summary
+    description: meal.summary
   }
 }
 
-export default function MealDetailsPage({params}){
+export default function MealDetailsPage({params}:{params:{mealSlug:string}}){
 
   const meal = getMeal(params.mealSlug);
   if(!meal){
@@ -47,9 +48,7 @@ export default function MealDetailsPage({params}){
     <main>
       <p
         className={classes.instructions}
-        dangerouslySetInnerHTML={{
-          __html: meal.instructions,
-        }}
+        dangerouslySetInnerHTML={{__html: meal.instructions}}
       ></p>
     </main>
   </>;

@@ -5,6 +5,7 @@ import communityIcon from '@/assets/icons/community.png';
 import eventsIcon from '@/assets/icons/events.png';
 import classes from './page.module.css';
 // app/community/page.js
+
 export default function CommunityPage() {
   return (
     <>
@@ -16,7 +17,6 @@ export default function CommunityPage() {
       </header>
       <main className={classes.main}>
         <h2>Community Perks</h2>
-
         <ul className={classes.perks}>
           <li>
             <Image src={mealIcon} alt="A delicious meal" />
@@ -27,10 +27,7 @@ export default function CommunityPage() {
             <p>Find new friends & like-minded people</p>
           </li>
           <li>
-            <Image
-              src={eventsIcon}
-              alt="A crowd of people at a cooking event"
-            />
+            <Image src={eventsIcon} alt="A crowd of people at a cooking event" />
             <p>Participate in exclusive events</p>
           </li>
         </ul>
