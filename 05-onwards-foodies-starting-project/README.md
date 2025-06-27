@@ -31,11 +31,11 @@ Deployed on **Vercel** | Local data via **SQLite**
 ## 🖼️ Screenshots
 
 <p align="center">
-  <img src="./public/demo-desktop.jpg" alt="Desktop view" width="700" />
+  <img src="demo-desktop.jpg" alt="Desktop view" width="700" />
 </p>
 
 <p align="center">
-  <img src="./public/demo-mobile.jpg" alt="Mobile view" width="300" />
+  <img src="demo-mobile.jpg" alt="Mobile view" width="300" />
 </p>
 
 ---
